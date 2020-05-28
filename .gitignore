@@ -31,8 +31,10 @@ build/
 .vscode/
 
 # Angular dependencies
-/angularProject/node_modules
+/node_modules/
 
 # e2e
 /angularProject/e2e/*.js
 /angularProject/e2e/*.map
+
+
