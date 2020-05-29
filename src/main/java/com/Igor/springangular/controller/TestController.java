@@ -14,11 +14,20 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     private List<Employee> employees = createList();
+    public class EmployeesResponse{
+        public List<Employee> employeeList;
+    }
 
     @RequestMapping(value = "/employees", method = RequestMethod.GET, produces = "application/json")
-    public List<Employee> firstPage() {
-        return employees;
+    public EmployeesResponse firstPage(){
+        EmployeesResponse emplResponse = new EmployeesResponse();
+        emplResponse.employeeList = employees;
+        return emplResponse;
     }
+    /*public List<Employee> firstPage() {
+        return employees;
+    }*/
+
     private static List<Employee> createList() {
         List<Employee> tempEmployees = new ArrayList<>();
         Employee emp1 = new Employee();
