@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 public class TestController {
+
     private List<Employee> employees = createList();
+
     @RequestMapping(value = "/employees", method = RequestMethod.GET, produces = "application/json")
     public List<Employee> firstPage() {
         return employees;
