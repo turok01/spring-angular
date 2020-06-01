@@ -19,14 +19,14 @@ public class TestController {
     }
 
     @RequestMapping(value = "/employees", method = RequestMethod.GET, produces = "application/json")
-    public EmployeesResponse firstPage(){
+    /*public EmployeesResponse firstPage(){
         EmployeesResponse emplResponse = new EmployeesResponse();
         emplResponse.employeeList = employees;
         return emplResponse;
-    }
-    /*public List<Employee> firstPage() {
-        return employees;
     }*/
+    public List<Employee> firstPage() {
+        return employees;
+    }
 
     private static List<Employee> createList() {
         List<Employee> tempEmployees = new ArrayList<>();
